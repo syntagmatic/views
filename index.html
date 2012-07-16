@@ -1,105 +1,14 @@
-<html>
-<head>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+<script src="lib/d3.v2.js"></script>
+<script src="views.js"></script>
+<link rel="stylesheet" type="text/css" href="views.css"></link>
 
-<style type="text/css">
-html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-}
-a {
-  text-decoration: none;
-}
-#wrap {
-  width: 100%;
-  height: 100%;
-}
-.view {
-  width: 50%;
-  height: 50%;
-  float: left;
-}
-#flipper {
-  position: absolute;
-  bottom: 13px;
-  right: 13px;
-}
-.button {
-  display: inline-block;
-  padding: 1px 6px;
-  border-radius: 4px;
-  background: #555;
-  color: #fff;
-}
-/* Temporary */
-#view-1 {
-  background: green;
-}
-#view-2 {
-  background: red;
-}
-#view-3 {
-  background: orange;
-}
-#view-4 {
-  background: blue;
-}
-/*************/
-</style>
-
-<script type="text/javascript">
-$(function() {
-
-  $('#switch-1').toggle( function() {
-    $('#view-1').width("100%").height("50%");
-    $('#view-2').width("33.34%").height("50%");
-    $('#view-3').width("33.33%").height("50%");
-    $('#view-4').width("33.33%").height("50%");
-  }, function() {
-    $('#view-1').width("33.34%").height("50%");
-    $('#view-2').width("33.33%").height("50%");
-    $('#view-3').width("33.33%").height("50%");
-    $('#view-4').width("100%").height("50%");
-  });
-  $('#switch-2').click( function() {
-    $('#view-1').width("50%").height("50%");
-    $('#view-2').width("50%").height("50%");
-    $('#view-3').width("50%").height("50%");
-    $('#view-4').width("50%").height("50%");
-  });
-  $('#switch-3').click( function() {
-    $('#view-1').width("50%").height("100%");
-    $('#view-2').width("50%").height("33.34%");
-    $('#view-3').width("50%").height("33.33%");
-    $('#view-4').width("50%").height("33.33%");
-  });
-  $('#switch-4').click( function() {
-    $('#view-1').width("50%").height("100%");
-    $('#view-2').width("50%").height("100%");
-    $('#view-3').width("50%").height("50%");
-    $('#view-4').width("50%").height("50%");
-  });
-
-});
-</script>
-</head>
 <body>
-<div id="wrap">
-  <div id="view-1" class="view">
+  <div class='pane' id="canvas">
+    <h2>Panes</h1>
+
   </div>
-  <div id="view-2" class="view">
-  </div>
-  <div id="view-3" class="view">
-  </div>
-  <div id="view-4" class="view">
-  </div>
-</div>
-<div id="flipper">
-  <a href="#" id="switch-1" class="button">1</a>
-  <a href="#" id="switch-2" class="button">2</a>
-  <a href="#" id="switch-3" class="button">3</a>
-  <a href="#" id="switch-4" class="button">4</a>
-</div>
+  <div class='pane' id="editor">i am an editor</div>
+  <div class='pane' id="console">i am a console</div>
+  <div class='pane' id="tutorial">i am a tutorial</div>
 </body>
-</html>
+

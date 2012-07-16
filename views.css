@@ -1,0 +1,21 @@
+body {
+  background: #322;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* temp */
+
+body {
+  font-family: sans-serif;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#canvas { background: #222; }
+#editor { background: #333; }
+#console { background: #444; }
+#tutorial { background: #555; }
