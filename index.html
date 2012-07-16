@@ -1,14 +1,41 @@
 <script src="lib/d3.v2.js"></script>
+<script src="lib/jwerty.js"></script>
 <script src="views.js"></script>
 <link rel="stylesheet" type="text/css" href="views.css"></link>
 
 <body>
   <div class='pane' id="canvas">
-    <h2>Panes</h1>
+    <h2>Controls</h2>
 
+    <h3>Layouts</h3>
+
+    <ul>
+      <li><b>Q</b> - layout('full')</li>
+      <li><b>W</b> - layout('half')</li>
+      <li><b>E</b> - layout('third')</li>
+      <li><b>R</b> - layout('quarter')</li>
+      <li><b>T</b> - layout('sixty_forty')</li>
+      <li><b>Y</b> - layout('major_minor_tertiary')</li>
+    </ul>
+
+    <h3>Cycling</h3>
+
+    <ul>
+      <li><b>P</b> - layout.cycle()</li>
+    </ul>
   </div>
   <div class='pane' id="editor">i am an editor</div>
   <div class='pane' id="console">i am a console</div>
   <div class='pane' id="tutorial">i am a tutorial</div>
 </body>
 
+<script>
+  layout('quarter');
+  jwerty.key('P', function() { layout.cycle(); });
+  jwerty.key('Q', function() { layout('full'); });
+  jwerty.key('W', function() { layout('half'); });
+  jwerty.key('E', function() { layout('third'); });
+  jwerty.key('R', function() { layout('quarter'); });
+  jwerty.key('T', function() { layout('sixty_forty'); });
+  jwerty.key('Y', function() { layout('major_minor_tertiary'); });
+</script>

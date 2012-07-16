@@ -2,6 +2,11 @@ var layout = (function() {
   var current = null;
 
   var styles = {
+    'full': {
+      'float': 'left',
+      'height': '100%',
+      'width': '100%'
+    },
     'full-30': {
       'float': 'left',
       'height': '100%',
@@ -35,6 +40,9 @@ var layout = (function() {
   };
 
   var definitions = {
+    'full': [
+      styles['full'],
+    ],
     'half': [
       styles['full-50'],
       styles['full-50']
@@ -108,9 +116,10 @@ var layout = (function() {
       .call(run_layout, definitions[layout_name])
   
     // save last layout
-    current = key;
+    current = layout_name;
   };
 
+  layout.current = current;
   layout.styles = styles;
   layout.cycle = cycle;
   layout.definitions = {};
