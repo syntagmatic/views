@@ -1,6 +1,7 @@
 var layout = (function() {
   var current = null;
 
+  // styles for individual panes
   var styles = {
     'full': {
       'float': 'left',
@@ -39,6 +40,8 @@ var layout = (function() {
     },
   };
 
+  // layout definitions
+  // create a new one with layout.define()
   var definitions = {
     'full': [
       styles['full'],
@@ -69,12 +72,14 @@ var layout = (function() {
     ]
   };
 
+  // allows styling with an object instead of chaining .style()
   var set_styles = function(selection, props, i) {
     for (var key in props) {
       selection.style(key, props[key]);
     }
   };
 
+  // runs the layout, hides unspecified divs
   var run_layout = function(selection, layout) {
     selection
       .style("display", function(d,i) {
@@ -110,6 +115,7 @@ var layout = (function() {
     layout(current, class_name);
   };
 
+  // run a layout, layout('sixty_forty')
   var layout = function(layout_name, class_name) {
     var class_name = class_name || '.pane';
     d3.selectAll(class_name)
